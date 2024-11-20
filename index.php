@@ -16,16 +16,25 @@
     </style>
 </head>
 <body>
-   <h1>recomended books</h1>
-   <?php
-     $books =["bangla","english","physics"];
-   ?>
-   <ul>
-        <?php
-        foreach ($books as $book) {
-            echo "<li> {$book} class 9</li>";
-        }
-        ?>
-   </ul>
+ <h1>recommended books</h1>
+ <?php
+  $books = [
+    [
+        "name"=> "bangla",
+        "class"=> "nine",
+        "url"=> "https://www.google.com",
+    ],
+    [
+        "name"=> "english",
+        "class"=> "nine",
+        "url"=> "https://www.youtube.com",
+    ],
+  ]
+ ?>
+ <ul>
+    <?php foreach($books as $book) : ?>
+        <li><a href="<?php echo $book['url'] ?>"><?php echo $book["name"]?></a></li>
+    <?php endforeach; ?>
+ </ul>
 </body>
 </html>
