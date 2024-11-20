@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: "sans-serif";
+        }
+    </style>
 </head>
 <body>
-    <h1>
+   <h1>recomended books</h1>
+   <?php
+     $books =["bangla","english","physics"];
+   ?>
+   <ul>
         <?php
-        echo "hello,world";
+        foreach ($books as $book) {
+            echo "<li> {$book} class 9</li>";
+        }
         ?>
-    </h1>
+   </ul>
 </body>
 </html>
