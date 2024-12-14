@@ -72,7 +72,13 @@ echo nl2br($text);
       </div>
 
       TEXT;
-      echo $text
+      echo $text;
+      $text = <<<'TEXT'
+      <div>
+      <p>hello world {$x}</p>
+      </div>
+
+      TEXT;
     ?>
     </h2>
    
