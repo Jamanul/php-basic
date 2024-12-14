@@ -73,7 +73,8 @@ echo nl2br($text);
 
       TEXT;
       echo $text;
-      $text = <<<'TEXT'
+      // this is nowdoc and and it is same as heredoc but we cant use variables here   
+      $text2 = <<<'TEXT'
       <div>
       <p>hello world {$x}</p>
       </div>
@@ -81,7 +82,29 @@ echo nl2br($text);
       TEXT;
     ?>
     </h2>
-   
+    <!-- <?php 
+    $programmingLanguages =['C++',"java","javascript"];
+     var_dump($programmingLanguages);
+     $programmingLanguages[]= "c#";
+     var_dump($programmingLanguages);
+     array_push($programmingLanguages, "c","python");
+     var_dump($programmingLanguages);
+    ?> -->
+    <?php 
+    $programmingLanguages =[
+      "php"=> 8.0,
+      "python" => 4.0
+    ];
+    print_r( $programmingLanguages);
+    $programmingLanguages['go'] ="unknown";
+    var_dump( $programmingLanguages);
+    ?>
+    <br>
+    <?php  
+    $x =(float) 10.9;
+    $y = 2;
+    echo fmod($x ,$y);
+    ?>
     <script>
 
       console.log(typeof(false))
