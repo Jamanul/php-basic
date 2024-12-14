@@ -40,23 +40,23 @@ echo nl2br($text);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-.gradient-border {
-  display: inline-block;
-  padding: 10px; /* Space between content and border */
-  border-radius: 16px; /* Add rounded corners */
-  background: linear-gradient(45deg, #f33cc0, #4349ff); /* Gradient for border */
-  position: relative;
-}
-
-.gradient-border .content {
-  background: black; /* Background color of the inner content */
-  border-radius: 12px; /* Match slightly smaller radius for content */
-  padding: 20px; /* Inner padding */
-}
-    </style>
 </head>
 <body>
-    <button class="gradient-border">Hello</button>
+    <h2>
+      <?php 
+        echo "hello world";
+      ?>
+      <br>
+       <?php 
+          $x =10;
+          $y =12;
+          echo "{$x} , {$y}"
+       ?>
+        <br>
+       <?php 
+       define('status',"paid");
+       echo status
+       ?>
+    </h2>
 </body>
 </html>
