@@ -57,6 +57,28 @@ echo nl2br($text);
        define('status',"paid");
        echo status
        ?>
+       <br>
+       <?php 
+        $isComplete = true;
+        var_dump($isComplete)
+       ?>
+       <br>
+        <?php 
+        $x =7778;
+        // this is heredoc and it is important
+      $text = <<<TEXT
+      <div>
+      <p>hello world {$x}</p>
+      </div>
+
+      TEXT;
+      echo $text
+    ?>
     </h2>
+   
+    <script>
+
+      console.log(typeof(false))
+    </script>
 </body>
 </html>
