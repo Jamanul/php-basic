@@ -7,7 +7,7 @@
   //   }
   //   echo $i++;
   // };
-
+  declare(strict_types=1);
  $programmingLang =['C++',"C",'C#'] ;
 for ($i=0,$length =count($programmingLang); $i <$length ; $i++) { 
   echo $programmingLang[$i];
@@ -47,3 +47,11 @@ $result =match($status){
   default=>"nothig found"
 };
 echo $result;
+
+echo  "<br/>";
+
+function sum (int $x , int $y){
+  return $x + $y;
+};
+
+
