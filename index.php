@@ -50,8 +50,32 @@ echo $result;
 
 echo  "<br/>";
 
+
+$x =10 ;
+$y =112;
 function sum (int $x , int $y){
-  return $x + $y;
+  return ($x + $y);
 };
 
 
+$name = "Alice";
+
+// Define a closure
+$greet = function() use ($name) {
+    echo "Hello, $name!";
+};
+
+// Call the closure
+$greet();  // Output: Hello, Alice!
+
+$array=[1,2,3,4];
+
+function foo ($e) {
+  return $e *2;
+};
+$array2 = Array_map('foo',$array);
+
+echo '<pre>';
+print_r($array);
+print_r($array2);
+echo '<pre/>';
