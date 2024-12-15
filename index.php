@@ -1,113 +1,49 @@
 <?php
-define ("STATUS_VOID","void");
-const STATUS_PAID = 'paid';
-echo STATUS_VOID;
-echo STATUS_PAID;
+  // $i =0;
+  // while($i<=15){
+  //   if($i % 2 !== 0 ){
+  //       $i++;
+  //   continue;
+  //   }
+  //   echo $i++;
+  // };
 
-echo PHP_VERSION;
+ $programmingLang =['C++',"C",'C#'] ;
+for ($i=0,$length =count($programmingLang); $i <$length ; $i++) { 
+  echo $programmingLang[$i];
+};
 
-// variable variable
+$programmingLanguages =['C++',"C",'C#',"python","C+","java"] ;
+foreach ($programmingLanguages as $key=> $language){
+  echo $key . ":" . $language . '<br/>';
+};
+// the  variable stays and you have to end it.
+unset($language);
+// print_r ($language);
 
-$foo = 'bar';
+$status =4;
 
-$$foo = 'baz';
-echo $foo , $bar;
-// strict mode ensures maintaining data type 
-// declare (strict_types=1);
+switch($status) {
+  case 1:
+  echo "paid";
+  break;
+  case 2: 
+  case 3: 
+  echo "rejected";
+  break;
+  case 4: 
+  echo "pending";
+  break;
+  default:
+  echo "nothig found";
 
-// type casting  gives type
-$x = (int)'5';
-var_dump($x);
+}
+echo  "<br/>";
 
-// heredoc
-// we can use variable here
-$text =<<<TEXT
-<div>hello world</div> $x
-TEXT;
-
-// nowdoc 
-// we can not use variable here
-$text =<<<'TEXT'
-<div>hello world</div>
-TEXT;
-
-
-echo nl2br($text);
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>
-      <?php 
-        echo "hello world";
-      ?>
-      <br>
-       <?php 
-          $x =10;
-          $y =12;
-          echo "{$x} , {$y}"
-       ?>
-        <br>
-       <?php 
-       define('status',"paid");
-       echo status
-       ?>
-       <br>
-       <?php 
-        $isComplete = true;
-        var_dump($isComplete)
-       ?>
-       <br>
-        <?php 
-        $x =7778;
-        // this is heredoc and it is important
-      $text = <<<TEXT
-      <div>
-      <p>hello world {$x}</p>
-      </div>
-
-      TEXT;
-      echo $text;
-      // this is nowdoc and and it is same as heredoc but we cant use variables here   
-      $text2 = <<<'TEXT'
-      <div>
-      <p>hello world {$x}</p>
-      </div>
-
-      TEXT;
-    ?>
-    </h2>
-    <!-- <?php 
-    $programmingLanguages =['C++',"java","javascript"];
-     var_dump($programmingLanguages);
-     $programmingLanguages[]= "c#";
-     var_dump($programmingLanguages);
-     array_push($programmingLanguages, "c","python");
-     var_dump($programmingLanguages);
-    ?> -->
-    <?php 
-    $programmingLanguages =[
-      "php"=> 8.0,
-      "python" => 4.0
-    ];
-    print_r( $programmingLanguages);
-    $programmingLanguages['go'] ="unknown";
-    var_dump( $programmingLanguages);
-    ?>
-    <br>
-    <?php  
-    $x =(float) 10.9;
-    $y = 2;
-    echo fmod($x ,$y);
-    ?>
-    <script>
-
-      console.log(typeof(false))
-    </script>
-</body>
-</html>
+$result =match($status){
+  1 =>  "paid",
+  2,3 => "rejected",
+  4 => "pending",
+  default=>"nothig found"
+};
+echo $result;
