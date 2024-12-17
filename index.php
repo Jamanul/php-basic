@@ -79,3 +79,20 @@ echo '<pre>';
 print_r($array);
 print_r($array2);
 echo '<pre/>';
+date_default_timezone_set('Asia/Dhaka'); // Set the timezone to Bangladesh
+$current_timestamp = date('Y-m-d H:i:s'); // Get current date and time in standard format
+echo "Current Bangladesh Timestamp: " . $current_timestamp;
+echo "<br/>";
+$numbers =[1,2,3,4,5,6,7,8,9,10];
+// Use strict typing for the callback
+$even = array_filter($numbers, fn(int $number): bool => $number % 2 === 0);
+$even =array_values($even);
+echo '<pre>';
+print_r($even);
+echo '</pre>';
+echo "<br/>";
+$double =array_map(fn(int $number):float|int=>$number *2,$array);
+
+echo '<pre>';
+print_r($double);
+echo '</pre>';
