@@ -7,7 +7,7 @@
   //   }
   //   echo $i++;
   // };
-  declare(strict_types=1);
+  // declare(strict_types=1);
  $programmingLang =['C++',"C",'C#'] ;
 for ($i=0,$length =count($programmingLang); $i <$length ; $i++) { 
   echo $programmingLang[$i];
@@ -91,8 +91,70 @@ echo '<pre>';
 print_r($even);
 echo '</pre>';
 echo "<br/>";
+
 $double =array_map(fn(int $number):float|int=>$number *2,$array);
 
 echo '<pre>';
 print_r($double);
+echo '</pre>';
+
+echo "<br/>";
+$products = [
+  [
+      "name" => "Laptop",
+      "price" => 1200.50,
+      "quantity" => 2
+  ],
+  [
+      "name" => "Smartphone",
+      "price" => 800.75,
+      "quantity" => 5
+  ],
+  [
+      "name" => "Headphones",
+      "price" => 150.25,
+      "quantity" => 10
+  ],
+  [
+      "name" => "Monitor",
+      "price" => 300.00,
+      "quantity" => 3
+  ],
+  [
+      "name" => "Keyboard",
+      "price" => 50.99,
+      "quantity" => 7
+  ]
+];
+$productsOne = [
+  [
+      "name" => "Laptop",
+      "price" => 1200.50,
+      "quantity" => 2
+  ],
+  [
+      "name" => "Smartphone",
+      "price" => 800.75,
+      "quantity" => 5
+  ],
+  [
+      "name" => "Headphones",
+      "price" => 150.25,
+      "quantity" => 10
+  ],
+  [
+      "name" => "Monitor",
+      "price" => 300.00,
+      "quantity" => 3
+  ],
+  [
+      "name" => "Keyboard",
+      "price" => 50.99,
+      "quantity" => 7
+  ]
+];
+
+$totalPrice = array_reduce($products,fn($sum,$item)=> $sum + $item["price"]* $item["quantity"],0);
+echo '<pre>';
+print_r($totalPrice);
 echo '</pre>';
