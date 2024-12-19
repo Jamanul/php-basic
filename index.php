@@ -158,3 +158,7 @@ $totalPrice = array_reduce($products,fn($sum,$item)=> $sum + $item["price"]* $it
 echo '<pre>';
 print_r($totalPrice);
 echo '</pre>';
+$totalPrice = array_reduce($products,fn($sum,$item)=> $sum + $item["price"]* $item["quantity"],0);
+echo '<pre>';
+print_r($totalPrice);
+echo '</pre>';
